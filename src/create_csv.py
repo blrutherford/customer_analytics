@@ -1,8 +1,9 @@
 import pandas as pd
-import numpy as np
 
+#read in raw data
 data = pd.read_excel("../data/raw/Online Retail.xlsx")
 
+#data cleaning
 data = data.dropna(subset=["CustomerID"])
 data = data[data["Quantity"] > 0]
 
